@@ -38,7 +38,6 @@
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:_popDelegate action:@selector(handleNavigationTransition:)];
 #pragma clang diagnostic pop
-    // 设置手势代理，拦截手势触发
     pan.delegate = self;
     [self.view addGestureRecognizer:pan];
     self.interactivePopGestureRecognizer.enabled = YES;
@@ -55,11 +54,10 @@
     {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused"
-        // FIXME:todo change pan userfull point
+        // FIXME:todo change pan userfull point 可以调整手势的作用范围
         CGPoint point = [gestureRecognizer locationInView:self.view];
 #pragma clang diagnostic pop
     }
-    
     return YES;
 }
 
