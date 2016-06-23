@@ -31,4 +31,10 @@
 {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,100, 44)];
+    titleLabel.text = [NSString stringWithFormat:@"我是标题%@",@(arc4random_uniform(255))];
+    self.navigationItem.titleView = titleLabel;
+}
 @end
