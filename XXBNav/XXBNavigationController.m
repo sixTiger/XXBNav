@@ -41,6 +41,19 @@
     pan.delegate = self;
     [self.view addGestureRecognizer:pan];
     self.interactivePopGestureRecognizer.enabled = YES;
+    [self setConfig];
+}
+
+/**
+ *  用于解决某些情况下View的布局出错
+ *
+ *  比如说view的上边多了20的空白，或者tableView的上边多了64的空白的问题
+ *
+ */
+- (void) setConfig {
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.extendedLayoutIncludesOpaqueBars = NO;
+    self.modalPresentationCapturesStatusBarAppearance = NO;
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
