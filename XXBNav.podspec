@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
   s.authors      = { '杨小兵' => 'six_tiger@163.com' }
   s.platform     = :ios
   s.ios.deployment_target = '7.0'
-  s.source       = { :git => "https://github.com/sixTiger/XXBRefresh.git"}
+  s.source       = { :git => "https://github.com/sixTiger/XXBNav.git"}
   s.public_header_files = 'XXBNav/XXBNavigationController.h'
-  s.source_files = 'XXBRefresh/XXBNavigationController.{h,m}'
+  s.source_files = 'XXBNav/XXBNavigationController.{h,m}'
   s.requires_arc  = true
 end
