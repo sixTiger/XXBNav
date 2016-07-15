@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.name         = 'XXBNav'
   s.version      = '0.0.1'
-  s.summary      = "20160415"
+  s.summary      = "20160715"
   s.homepage     = "https://github.com/sixTiger/XXBNav"
   s.license      = "MIT"
   s.authors      = { '杨小兵' => 'six_tiger@163.com' }
