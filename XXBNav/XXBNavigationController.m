@@ -38,7 +38,7 @@
 #pragma clang diagnostic pop
     pan.delegate = self;
     [self.view addGestureRecognizer:pan];
-    self.interactivePopGestureRecognizer.enabled = YES;
+    self.interactivePopGestureRecognizer.enabled = NO;
     [self setConfig];
 }
 
@@ -55,6 +55,14 @@
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    
+    if ([[self valueForKey:@"_isTransitioning"] boolValue]) {
+        /**
+         *  如果正在执行专场动画就不响应手势
+         */
+        return NO;
+    }
+    
     if (gestureRecognizer == self.panGestureRecognizer) {
         if (self.childViewControllers.count == 1) {
             return NO;
