@@ -19,6 +19,9 @@
 		62ADBBF61BCBA622001A3085 /* XXBNavDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62ADBBF51BCBA622001A3085 /* XXBNavDemoUITests.m */; };
 		62B6EE9B1C57405D00EFA0E8 /* XXBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B6EE9A1C57405D00EFA0E8 /* XXBViewController.m */; };
 		62B6EE9E1C5743FA00EFA0E8 /* XXBLastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B6EE9D1C5743FA00EFA0E8 /* XXBLastViewController.m */; };
+		7824D28C20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7824D28B20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.m */; };
+		7824D28F20BD067700DD1C56 /* XXBPushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7824D28E20BD067700DD1C56 /* XXBPushAnimation.m */; };
+		7824D29220BD069200DD1C56 /* XXBPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7824D29120BD069200DD1C56 /* XXBPopAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,12 @@
 		62B6EE9A1C57405D00EFA0E8 /* XXBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBViewController.m; sourceTree = "<group>"; };
 		62B6EE9C1C5743FA00EFA0E8 /* XXBLastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBLastViewController.h; sourceTree = "<group>"; };
 		62B6EE9D1C5743FA00EFA0E8 /* XXBLastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBLastViewController.m; sourceTree = "<group>"; };
+		7824D28A20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBBaseTransitioningAnimation.h; sourceTree = "<group>"; };
+		7824D28B20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBBaseTransitioningAnimation.m; sourceTree = "<group>"; };
+		7824D28D20BD067700DD1C56 /* XXBPushAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBPushAnimation.h; sourceTree = "<group>"; };
+		7824D28E20BD067700DD1C56 /* XXBPushAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBPushAnimation.m; sourceTree = "<group>"; };
+		7824D29020BD069200DD1C56 /* XXBPopAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBPopAnimation.h; sourceTree = "<group>"; };
+		7824D29120BD069200DD1C56 /* XXBPopAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBPopAnimation.m; sourceTree = "<group>"; };
 		83BE3745AF1E42474230D2C0 /* libPods-XXBNavDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XXBNavDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,7 +115,6 @@
 			children = (
 				6264771B1BCCA3D4006BFD1C /* Controller */,
 				6264771E1BCCA3D4006BFD1C /* Others */,
-				626477221BCCA3D4006BFD1C /* View */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -132,13 +140,6 @@
 				626477211BCCA3D4006BFD1C /* main.m */,
 			);
 			path = Others;
-			sourceTree = "<group>";
-		};
-		626477221BCCA3D4006BFD1C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		62ADBBC41BCBA622001A3085 = {
@@ -207,6 +208,12 @@
 			children = (
 				626477141BCCA319006BFD1C /* XXBNavigationController.h */,
 				626477151BCCA319006BFD1C /* XXBNavigationController.m */,
+				7824D28A20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.h */,
+				7824D28B20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.m */,
+				7824D28D20BD067700DD1C56 /* XXBPushAnimation.h */,
+				7824D28E20BD067700DD1C56 /* XXBPushAnimation.m */,
+				7824D29020BD069200DD1C56 /* XXBPopAnimation.h */,
+				7824D29120BD069200DD1C56 /* XXBPopAnimation.m */,
 			);
 			name = XXBNav;
 			path = ../../XXBNav;
@@ -390,7 +397,10 @@
 				626477161BCCA319006BFD1C /* XXBNavigationController.m in Sources */,
 				626477251BCCA3D4006BFD1C /* main.m in Sources */,
 				626477241BCCA3D4006BFD1C /* AppDelegate.m in Sources */,
+				7824D28C20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.m in Sources */,
 				62B6EE9E1C5743FA00EFA0E8 /* XXBLastViewController.m in Sources */,
+				7824D29220BD069200DD1C56 /* XXBPopAnimation.m in Sources */,
+				7824D28F20BD067700DD1C56 /* XXBPushAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

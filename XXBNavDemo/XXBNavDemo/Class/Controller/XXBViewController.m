@@ -23,9 +23,8 @@
     self.title = @"<<++++++>>";
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [super touchesBegan:touches withEvent:event];
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesEnded:touches withEvent:event];
     [self.navigationController pushViewController:[XXBLastViewController new] animated:YES];
 }
 @end

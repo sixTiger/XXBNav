@@ -7,10 +7,17 @@
 //
 
 #import "XXBNavigationController.h"
+#import "XXBBaseTransitioningAnimation.h"
+#import "XXBPushAnimation.h"
+#import "XXBPopAnimation.h"
 
-@interface XXBNavigationController ()<UIGestureRecognizerDelegate>
-@property (nonatomic, strong) id                        popDelegate;
-@property(nonatomic , strong) UIPanGestureRecognizer    *panGestureRecognizer;
+@interface XXBNavigationController ()<UIGestureRecognizerDelegate, UINavigationControllerDelegate>
+@property (nonatomic, strong) id                                popDelegate;
+@property(nonatomic , strong) UIPanGestureRecognizer            *panGestureRecognizer;
+@property(nonatomic, strong) XXBBaseTransitioningAnimation      *transitioningAnimation;
+@property(nonatomic, strong) XXBPushAnimation                   *pushAnimation;
+@property(nonatomic, strong) XXBPopAnimation                    *popAnimation;
+
 @end
 
 @implementation XXBNavigationController
@@ -40,6 +47,7 @@
     [self.view addGestureRecognizer:pan];
     self.interactivePopGestureRecognizer.enabled = NO;
     [self setConfig];
+    self.delegate = self;
 }
 
 /**
@@ -80,4 +88,53 @@
     }
 }
 
+#pragma mark - UINavigationControllerDelegate START
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
+    switch (operation) {
+        case UINavigationControllerOperationPush:
+            return self.pushAnimation;
+            break;
+        case UINavigationControllerOperationPop:
+            return self.popAnimation;
+            break;
+            
+        default:
+            break;
+    }
+    return self.transitioningAnimation;
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+}
+#pragma mark - UINavigationControllerDelegate END
+
+#pragma mark - layz Load
+- (XXBBaseTransitioningAnimation *)transitioningAnimation {
+    if (_transitioningAnimation == nil) {
+        _transitioningAnimation = [[XXBBaseTransitioningAnimation alloc] init];
+    }
+    return _transitioningAnimation;
+}
+
+- (XXBPushAnimation *)pushAnimation {
+    if (_pushAnimation == nil) {
+        XXBPushAnimation *pushAnimation = [[XXBPushAnimation alloc] init];
+        _pushAnimation = pushAnimation;
+    }
+    return _pushAnimation;
+}
+
+- (XXBPopAnimation *)popAnimation {
+    if (_popAnimation == nil) {
+        XXBPopAnimation *popAnimation = [[XXBPopAnimation alloc] init];
+        _popAnimation = popAnimation;
+    }
+    return _popAnimation;
+}
 @end
