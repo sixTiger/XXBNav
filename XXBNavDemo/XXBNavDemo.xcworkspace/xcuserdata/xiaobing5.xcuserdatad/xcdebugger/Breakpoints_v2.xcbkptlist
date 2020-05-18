@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "491E2EDB-E3DF-48FD-8779-47B0B6F52E6C"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "DC88F65A-70BF-49E6-BD73-FB83D50E8709"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../XXBNav/XXBBaseTransitioningAnimation.m"
-            timestampString = "549263589.993127"
+            filePath = "XXBNavDemo/Class/Controller/XXBLastViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-transitionDuration:"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-p_popToRoot"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -50,17 +50,15 @@
     CGFloat screenW = screenBounds.size.width;
     CGFloat screenH = screenBounds.size.height;
     toView.frame = CGRectMake(0, screenH, screenW, screenH);
-    self.containerView.backgroundColor = [UIColor blackColor];    
+    self.containerView.backgroundColor = [UIColor blackColor];
     [self.containerView addSubview:fromeView];
     [self.containerView addSubview:toView];
-    
-    [UIView animateWithDuration:self.transitionDuration
-                     animations:^{
-                         toView.frame = screenBounds;
-                         toView.frame = screenBounds;
-                     } completion:^(BOOL finished) {
-                         [self completeTransition];
-                     }];
+    [UIView animateWithDuration:self.transitionDuration animations:^{
+        toView.frame = screenBounds;
+        toView.frame = screenBounds;
+    } completion:^(BOOL finished) {
+        [self completeTransition];
+    }];
 }
 
 #pragma mark - PUBLIC
@@ -68,12 +66,11 @@
 - (void)completeTransition {
     [self.transitionContext completeTransition:!self.transitionContext.transitionWasCancelled];
     if (self.toViewController || self.fromViewController) {
-//        self.toViewController.navigationController.delegate = nil;
-//        self.fromViewController.navigationController.delegate = nil;
     } else {
     }
     self.fromViewController = nil;
     self.toViewController = nil;
+    self.transitionContext = nil;
 }
 
 @end

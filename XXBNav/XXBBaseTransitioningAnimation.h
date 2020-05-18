@@ -15,7 +15,7 @@
 /**
  transitionContext
  */
-@property (nonatomic, weak) id <UIViewControllerContextTransitioning>   transitionContext;
+@property (nonatomic, strong) id <UIViewControllerContextTransitioning>   transitionContext;
 
 /**
  动画执行时间(默认值为0.25s)
