@@ -8,6 +8,7 @@
 
 #import "XXBLastViewController.h"
 #import <XXBLibs.h>
+#import <XXBLibs/XXBLibsCategory.h>
 
 @implementation XXBLastViewController
 

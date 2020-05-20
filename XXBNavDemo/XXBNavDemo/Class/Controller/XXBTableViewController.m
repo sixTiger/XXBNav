@@ -8,6 +8,7 @@
 
 #import "XXBTableViewController.h"
 #import <XXBLibs.h>
+#import <XXBLibs/XXBLibsCategory.h>
 #import "XXBViewController.h"
 
 @interface XXBTableViewController ()

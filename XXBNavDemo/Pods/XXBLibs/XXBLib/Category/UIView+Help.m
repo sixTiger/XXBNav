@@ -10,53 +10,86 @@
 
 @implementation UIView (Help)
 
-- (void)setWidth:(CGFloat)width
-{
+- (void)setXxb_width:(CGFloat)xxb_width {
     CGRect frame = self.frame;
-    frame.size.width = width;
+    frame.size.width = xxb_width;
     self.frame = frame;
 }
-- (CGFloat)width
-{
+
+- (CGFloat)xxb_width {
     return self.frame.size.width;
 }
 
-- (void)setHeight:(CGFloat)height
-{
+- (void)setXxb_height:(CGFloat)xxb_height {
     CGRect frame = self.frame;
-    frame.size.height = height;
+    frame.size.height = xxb_height;
     self.frame = frame;
 }
 
-- (CGFloat)height
-{
+- (CGFloat)xxb_height {
     return self.frame.size.height;
 }
 
-- (void)setX:(CGFloat)x
-{
+- (void)setXxb_x:(CGFloat)xxb_x {
     CGRect frame = self.frame;
-    frame.origin.x = x;
+    frame.origin.x = xxb_x;
     self.frame = frame;
 }
-- (CGFloat)x
-{
+- (CGFloat)xxb_x {
     return self.frame.origin.x;
 }
 
-- (void)setY:(CGFloat)y
-{
+- (void)setXxb_y:(CGFloat)xxb_y {
     CGRect frame = self.frame;
-    frame.origin.y = y;
+    frame.origin.y = xxb_y;
     self.frame = frame;
 }
-- (CGFloat)y
-{
+
+- (CGFloat)xxb_y {
     return self.frame.origin.y;
 }
+
+- (void)setXxb_centerX:(CGFloat)xxb_centerX {
+    CGPoint center = self.center;
+    center.x = xxb_centerX;
+    self.center = center;
+}
+
+- (CGFloat)xxb_centerX {
+    return self.center.x;
+}
+
+- (void)setXxb_centerY:(CGFloat)xxb_centerY {
+    CGPoint center = self.center;
+    center.y = xxb_centerY;
+    self.center = center;
+}
+
+- (CGFloat)xxb_centerY {
+    return self.center.y;
+}
+
+- (void)setXxb_size:(CGSize)xxb_size {
+    CGRect frame = self.frame;
+    frame.size = xxb_size;
+    self.frame = frame;
+}
+
+- (CGSize)xxb_size {
+    return self.frame.size;
+}
+
+- (void)setXxb_origin:(CGPoint)xxb_origin {
+    CGRect frame = self.frame;
+    frame.origin = xxb_origin;
+    self.frame = frame;
+}
+
+- (CGPoint)xxb_origin {
+    return self.frame.origin;
+}
 #pragma mark - 扩散动画
-- (void)addAnimationAtPoint:(CGPoint)point;
-{
+- (void)addAnimationAtPoint:(CGPoint)point {
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     CGFloat diameter = [self mdShapeDiameterForPoint:point];
     shapeLayer.frame = CGRectMake(floor(point.x - diameter * 0.5), floor(point.y - diameter * 0.5), diameter, diameter);
@@ -81,12 +114,12 @@
     [shapeLayer addAnimation:animation forKey:@"shapeBackgroundAnimation"];
     [CATransaction commit];
 }
-- (void)addAnimationAtPoint:(CGPoint)point WithType:(animationType) type withColor:(UIColor *)animationColor completion:(void (^)(BOOL))completion
-{
+
+- (void)addAnimationAtPoint:(CGPoint)point WithType:(animationType) type withColor:(UIColor *)animationColor completion:(void (^)(BOOL))completion {
     [self addAnimationAtPoint:point WithDuration:1.0 WithType:type withColor:animationColor  completion:completion];
 }
-- (void)addAnimationAtPoint:(CGPoint)point WithDuration:(NSTimeInterval)duration WithType:(animationType) type withColor:(UIColor *)animationColor completion:(void (^)(BOOL finished))completion
-{
+
+- (void)addAnimationAtPoint:(CGPoint)point WithDuration:(NSTimeInterval)duration WithType:(animationType) type withColor:(UIColor *)animationColor completion:(void (^)(BOOL finished))completion {
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     CGFloat diameter = [self mdShapeDiameterForPoint:point];
     shapeLayer.frame = CGRectMake(floor(point.x - diameter * 0.5), floor(point.y - diameter * 0.5), diameter, diameter);
@@ -123,17 +156,15 @@
     [CATransaction begin];
     [CATransaction setCompletionBlock:^{
         [shapeLayer removeFromSuperlayer];
-        if (completion)
-        {
+        if (completion) {
             completion(true);
         }
     }];
     [shapeLayer addAnimation:animation forKey:@"shapeBackgroundAnimation"];
     [CATransaction commit];
-    
 }
-- (void)addAnimationAtPoint:(CGPoint)point WithType:(animationType) type withColor:(UIColor *)animationColor;
-{
+
+- (void)addAnimationAtPoint:(CGPoint)point WithType:(animationType) type withColor:(UIColor *)animationColor {
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     CGFloat diameter = [self mdShapeDiameterForPoint:point];
     shapeLayer.frame = CGRectMake(floor(point.x - diameter * 0.5), floor(point.y - diameter * 0.5), diameter, diameter);
@@ -174,9 +205,9 @@
     [shapeLayer addAnimation:animation forKey:@"shapeBackgroundAnimation"];
     [CATransaction commit];
 }
+
 //计算离屏幕的边框最大的距离
-- (CGFloat)mdShapeDiameterForPoint:(CGPoint)point
-{
+- (CGFloat)mdShapeDiameterForPoint:(CGPoint)point {
     CGPoint cornerPoints[] = {
         {0.0, 0.0},
         {0.0, self.bounds.size.height},
@@ -184,12 +215,10 @@
         {self.bounds.size.width, 0.0}
     };
     CGFloat radius = 0.0;
-    for (int i = 0; i < 4; i++)
-    {
+    for (int i = 0; i < 4; i++) {
         CGPoint p = cornerPoints[i];
         CGFloat d = sqrt( pow(p.x - point.x, 2.0) + pow(p.y - point.y, 2.0) );
-        if (d > radius)
-        {
+        if (d > radius) {
             radius = d;
         }
     }

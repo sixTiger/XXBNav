@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17B6AD195C6C7F936FD00D48 /* libPods-XXBNavDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83BE3745AF1E42474230D2C0 /* libPods-XXBNavDemo.a */; };
+		4245C36C6AFB85EDD5D775D5 /* libPods-XXBNavDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB04A9D5051E5054851162E /* libPods-XXBNavDemo.a */; };
 		626477161BCCA319006BFD1C /* XXBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 626477151BCCA319006BFD1C /* XXBNavigationController.m */; };
 		626477231BCCA3D4006BFD1C /* XXBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6264771D1BCCA3D4006BFD1C /* XXBTableViewController.m */; };
 		626477241BCCA3D4006BFD1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 626477201BCCA3D4006BFD1C /* AppDelegate.m */; };
@@ -23,8 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07AF95C06D50855DCBBAB8E7 /* Pods-XXBNavDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXBNavDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XXBNavDemo/Pods-XXBNavDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		58A2BC521234244DDB2DF383 /* Pods-XXBNavDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXBNavDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-XXBNavDemo/Pods-XXBNavDemo.release.xcconfig"; sourceTree = "<group>"; };
+		117083F15192F23F673E1DC3 /* Pods-XXBNavDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXBNavDemo.debug.xcconfig"; path = "Target Support Files/Pods-XXBNavDemo/Pods-XXBNavDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		3DB04A9D5051E5054851162E /* libPods-XXBNavDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XXBNavDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40994AAFEB49C55AEA24383D /* Pods-XXBNavDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXBNavDemo.release.xcconfig"; path = "Target Support Files/Pods-XXBNavDemo/Pods-XXBNavDemo.release.xcconfig"; sourceTree = "<group>"; };
 		626477141BCCA319006BFD1C /* XXBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBNavigationController.h; sourceTree = "<group>"; };
 		626477151BCCA319006BFD1C /* XXBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBNavigationController.m; sourceTree = "<group>"; };
 		6264771C1BCCA3D4006BFD1C /* XXBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBTableViewController.h; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		7824D28E20BD067700DD1C56 /* XXBPushAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBPushAnimation.m; sourceTree = "<group>"; };
 		7824D29020BD069200DD1C56 /* XXBPopAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBPopAnimation.h; sourceTree = "<group>"; };
 		7824D29120BD069200DD1C56 /* XXBPopAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBPopAnimation.m; sourceTree = "<group>"; };
-		83BE3745AF1E42474230D2C0 /* libPods-XXBNavDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XXBNavDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,20 +55,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17B6AD195C6C7F936FD00D48 /* libPods-XXBNavDemo.a in Frameworks */,
+				4245C36C6AFB85EDD5D775D5 /* libPods-XXBNavDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04067701BD255B496F1D29D3 /* Pods */ = {
+		271B8AF7A8578B5A19826791 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				07AF95C06D50855DCBBAB8E7 /* Pods-XXBNavDemo.debug.xcconfig */,
-				58A2BC521234244DDB2DF383 /* Pods-XXBNavDemo.release.xcconfig */,
+				3DB04A9D5051E5054851162E /* libPods-XXBNavDemo.a */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6264771A1BCCA3D4006BFD1C /* Class */ = {
@@ -108,8 +107,8 @@
 			children = (
 				62ADBBCF1BCBA622001A3085 /* XXBNavDemo */,
 				62ADBBCE1BCBA622001A3085 /* Products */,
-				04067701BD255B496F1D29D3 /* Pods */,
-				C5198AC3CA4EE6B87CA6F5A1 /* Frameworks */,
+				6C100B052F844D244FFEC959 /* Pods */,
+				271B8AF7A8578B5A19826791 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,12 +157,13 @@
 			path = ../../XXBNav;
 			sourceTree = "<group>";
 		};
-		C5198AC3CA4EE6B87CA6F5A1 /* Frameworks */ = {
+		6C100B052F844D244FFEC959 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				83BE3745AF1E42474230D2C0 /* libPods-XXBNavDemo.a */,
+				117083F15192F23F673E1DC3 /* Pods-XXBNavDemo.debug.xcconfig */,
+				40994AAFEB49C55AEA24383D /* Pods-XXBNavDemo.release.xcconfig */,
 			);
-			name = Frameworks;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,11 +173,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62ADBBFA1BCBA622001A3085 /* Build configuration list for PBXNativeTarget "XXBNavDemo" */;
 			buildPhases = (
-				7AC0CEB44FFAF7967A2A140A /* Check Pods Manifest.lock */,
+				94A34E2E96C4BE448DCCF9C0 /* [CP] Check Pods Manifest.lock */,
 				62ADBBC91BCBA622001A3085 /* Sources */,
 				62ADBBCA1BCBA622001A3085 /* Frameworks */,
 				62ADBBCB1BCBA622001A3085 /* Resources */,
-				7B3EDE571E516E57E87E9753 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,7 +193,7 @@
 		62ADBBC51BCBA622001A3085 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = xiaobing;
 				TargetAttributes = {
 					62ADBBCC1BCBA622001A3085 = {
@@ -205,10 +204,9 @@
 			};
 			buildConfigurationList = 62ADBBC81BCBA622001A3085 /* Build configuration list for PBXProject "XXBNavDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -236,34 +234,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7AC0CEB44FFAF7967A2A140A /* Check Pods Manifest.lock */ = {
+		94A34E2E96C4BE448DCCF9C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XXBNavDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7B3EDE571E516E57E87E9753 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XXBNavDemo/Pods-XXBNavDemo-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -311,17 +301,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -354,17 +355,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -389,7 +401,7 @@
 		};
 		62ADBBFB1BCBA622001A3085 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07AF95C06D50855DCBBAB8E7 /* Pods-XXBNavDemo.debug.xcconfig */;
+			baseConfigurationReference = 117083F15192F23F673E1DC3 /* Pods-XXBNavDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XVTV8VU3M3;
@@ -403,7 +415,7 @@
 		};
 		62ADBBFC1BCBA622001A3085 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58A2BC521234244DDB2DF383 /* Pods-XXBNavDemo.release.xcconfig */;
+			baseConfigurationReference = 40994AAFEB49C55AEA24383D /* Pods-XXBNavDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XVTV8VU3M3;

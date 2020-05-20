@@ -1,19 +1,58 @@
 {
   "name": "XXBLibs",
   "requires_arc": true,
-  "version": "1.0.0",
-  "summary": "test",
+  "version": "0.0.6",
+  "summary": "20150103",
   "homepage": "https://github.com/sixTiger/XXBLibs",
   "license": "MIT",
   "authors": {
-    "杨小兵": "six_tiger@163.com"
+    "杨小兵": "lhxiaobing@qq.com"
   },
   "platforms": {
-    "ios": "6.0"
+    "ios": "8.0"
   },
   "source": {
     "git": "https://github.com/sixTiger/XXBLibs.git",
-    "tag": "1.0.0"
+    "tag": "0.0.6"
   },
-  "source_files": "XXBLib/**/*.{h,m}"
+  "public_header_files": "XXBLib/XXBLibs.h",
+  "source_files": "XXBLib/XXBLibs.h",
+  "default_subspecs": "Class",
+  "subspecs": [
+    {
+      "name": "Others",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "source_files": "XXBLib/Others/*.{h,m}",
+      "subspecs": [
+        {
+          "name": "Reachability",
+          "public_header_files": "XXBLib/Others/Reachability/Reachability.h",
+          "source_files": "XXBLib/Others/Reachability/Reachability.{h,m}"
+        }
+      ]
+    },
+    {
+      "name": "Class",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "dependencies": {
+        "XXBLibs/Others": [
+
+        ]
+      },
+      "source_files": "XXBLib/Class/*.{h,m}",
+      "public_header_files": "XXBLib/Class/*.h"
+    },
+    {
+      "name": "Category",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "source_files": "XXBLib/Category/*.{h,m}",
+      "public_header_files": "XXBLib/Category/*.h"
+    }
+  ]
 }

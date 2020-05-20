@@ -1,8 +1,10 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '7.0'
+platform :ios, '8.0'
 target 'XXBNavDemo' do
 pod 'XXBLibs', :git => "https://github.com/sixTiger/XXBLibs"
+pod 'XXBLibs/Category', :git => "https://github.com/sixTiger/XXBLibs"
+pod 'XXBLibs/Others', :git => "https://github.com/sixTiger/XXBLibs"
 end
-target 'XXBNavDemoTests'  do
-end
+
+
 

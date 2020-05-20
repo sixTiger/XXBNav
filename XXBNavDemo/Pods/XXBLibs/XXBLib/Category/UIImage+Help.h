@@ -28,6 +28,7 @@
  *  @return 穿件好的image
  */
 + (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size;
+
 /**
  *  拉伸图片
  *
@@ -36,6 +37,7 @@
  *  @return 拉伸好的图片
  */
 + (UIImage * )resizedImageWithImageName:(NSString *)name;
+
 /**
  *  拉伸图片
  *
@@ -44,20 +46,21 @@
  *  @return 拉伸好的图片
  */
 + (UIImage * )resizedImageWithImage:(UIImage *)image;
+
 /**
  *  返回一个缩放好的图片
  *
  *  @param image  要切割的图片
- *  @param 需要切割成的大小 边框的宽度
+ *  @param imageSize 边框的宽度
  *
  *  @return 切割好的图片
  */
 +(UIImage *)cutImage:(UIImage*)image andSize:(CGSize)imageSize;
+
 /**
  *  返回一个下边有半个红圈的原型头像
  *
  *  @param image  要切割的图片
- *  @param border 边框的宽度
  *
  *  @return 切割好的头像
  */
@@ -84,6 +87,7 @@
  *  @return 切割好的头像
  */
 + (UIImage *)captureCircleImageWithImage:(UIImage *)iconImage andBorderWith:(CGFloat)border andBorderColor:(UIColor *)color;
+
 /**
  *  生成毛玻璃效果的图片
  *
@@ -93,14 +97,25 @@
  *  @return 返回模糊化之后的图片
  */
 + (UIImage *)blurredImageWithImage:(UIImage *)image andBlurAmount:(CGFloat)blurAmount;
+
 /**
- *  截取想赢的view生成一张图片
+ *  截取想要的view生成一张图片
  *
  *  @param view 要截的view
  *
  *  @return 生成的图片
  */
 + (UIImage *)viewShotWithView:(UIView *)view;
+
+/**
+ *  截取想要的view生成一张图片
+ *
+ *  @param view 要截的view
+ *
+ *  @return 生成的图片
+ */
++ (UIImage *)viewShotWithView_webView:(UIView *)view;
+
 /**
  *  截屏
  *
@@ -146,6 +161,7 @@
  *  @return 返回模糊化好的图片
  */
 - (UIImage *)blurredImage:(CGFloat)blurAmount;
+
 /**
  *  生成一个毛玻璃效果的图片
  *
@@ -165,7 +181,6 @@
 //! Applies a blur, tint color, and saturation adjustment to @a inputImage,
 //! optionally within the area specified by @a maskImage.
 //!
-//! @param  inputImage
 //!         The source image.  A modified copy of this image will be returned.
 //! @param  blurRadius
 //!         The radius of the blur in points.

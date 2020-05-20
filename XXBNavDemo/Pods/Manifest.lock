@@ -1,8 +1,17 @@
 PODS:
-  - XXBLibs (1.0.0)
+  - XXBLibs (0.0.6):
+    - XXBLibs/Class (= 0.0.6)
+  - XXBLibs/Category (0.0.6)
+  - XXBLibs/Class (0.0.6):
+    - XXBLibs/Others
+  - XXBLibs/Others (0.0.6):
+    - XXBLibs/Others/Reachability (= 0.0.6)
+  - XXBLibs/Others/Reachability (0.0.6)
 
 DEPENDENCIES:
   - XXBLibs (from `https://github.com/sixTiger/XXBLibs`)
+  - XXBLibs/Category (from `https://github.com/sixTiger/XXBLibs`)
+  - XXBLibs/Others (from `https://github.com/sixTiger/XXBLibs`)
 
 EXTERNAL SOURCES:
   XXBLibs:
@@ -10,10 +19,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   XXBLibs:
-    :commit: b7c4165578d1983d815c7a5b552f5db4157e75e5
+    :commit: 93e02cbf49d5ecf3d311906183784d29e00e94ef
     :git: https://github.com/sixTiger/XXBLibs
 
 SPEC CHECKSUMS:
-  XXBLibs: 6f894394d94e7678f68b8432671d23bbf85bdc30
+  XXBLibs: 5122cfe73ee572d6da21062de646fc1363e9634e
 
-COCOAPODS: 0.38.2
+PODFILE CHECKSUM: 323b6e9c671e8d401e17a35d1513d6d0251b652a
+
+COCOAPODS: 1.7.3
