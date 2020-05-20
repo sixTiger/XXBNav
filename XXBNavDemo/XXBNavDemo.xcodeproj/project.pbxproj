@@ -15,11 +15,12 @@
 		62ADBBDB1BCBA622001A3085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62ADBBD91BCBA622001A3085 /* Main.storyboard */; };
 		62ADBBDD1BCBA622001A3085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62ADBBDC1BCBA622001A3085 /* Assets.xcassets */; };
 		62ADBBE01BCBA622001A3085 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62ADBBDE1BCBA622001A3085 /* LaunchScreen.storyboard */; };
-		62B6EE9B1C57405D00EFA0E8 /* XXBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B6EE9A1C57405D00EFA0E8 /* XXBViewController.m */; };
+		62B6EE9B1C57405D00EFA0E8 /* XXBMianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B6EE9A1C57405D00EFA0E8 /* XXBMianViewController.m */; };
 		62B6EE9E1C5743FA00EFA0E8 /* XXBLastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B6EE9D1C5743FA00EFA0E8 /* XXBLastViewController.m */; };
-		7824D28C20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7824D28B20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.m */; };
+		7824D28C20BC537F00DD1C56 /* XXBTransitioningAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7824D28B20BC537F00DD1C56 /* XXBTransitioningAnimation.m */; };
 		7824D28F20BD067700DD1C56 /* XXBPushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7824D28E20BD067700DD1C56 /* XXBPushAnimation.m */; };
 		7824D29220BD069200DD1C56 /* XXBPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7824D29120BD069200DD1C56 /* XXBPopAnimation.m */; };
+		7891CE152474DA790069464A /* XXBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7891CE142474DA790069464A /* XXBViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,16 +39,18 @@
 		62ADBBDC1BCBA622001A3085 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62ADBBDF1BCBA622001A3085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62ADBBE11BCBA622001A3085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62B6EE991C57405D00EFA0E8 /* XXBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBViewController.h; sourceTree = "<group>"; };
-		62B6EE9A1C57405D00EFA0E8 /* XXBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBViewController.m; sourceTree = "<group>"; };
+		62B6EE991C57405D00EFA0E8 /* XXBMianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBMianViewController.h; sourceTree = "<group>"; };
+		62B6EE9A1C57405D00EFA0E8 /* XXBMianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBMianViewController.m; sourceTree = "<group>"; };
 		62B6EE9C1C5743FA00EFA0E8 /* XXBLastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBLastViewController.h; sourceTree = "<group>"; };
 		62B6EE9D1C5743FA00EFA0E8 /* XXBLastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBLastViewController.m; sourceTree = "<group>"; };
-		7824D28A20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBBaseTransitioningAnimation.h; sourceTree = "<group>"; };
-		7824D28B20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBBaseTransitioningAnimation.m; sourceTree = "<group>"; };
+		7824D28A20BC537F00DD1C56 /* XXBTransitioningAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBTransitioningAnimation.h; sourceTree = "<group>"; };
+		7824D28B20BC537F00DD1C56 /* XXBTransitioningAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBTransitioningAnimation.m; sourceTree = "<group>"; };
 		7824D28D20BD067700DD1C56 /* XXBPushAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBPushAnimation.h; sourceTree = "<group>"; };
 		7824D28E20BD067700DD1C56 /* XXBPushAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBPushAnimation.m; sourceTree = "<group>"; };
 		7824D29020BD069200DD1C56 /* XXBPopAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBPopAnimation.h; sourceTree = "<group>"; };
 		7824D29120BD069200DD1C56 /* XXBPopAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBPopAnimation.m; sourceTree = "<group>"; };
+		7891CE132474DA790069464A /* XXBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBViewController.h; sourceTree = "<group>"; };
+		7891CE142474DA790069464A /* XXBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +87,8 @@
 			children = (
 				6264771C1BCCA3D4006BFD1C /* XXBTableViewController.h */,
 				6264771D1BCCA3D4006BFD1C /* XXBTableViewController.m */,
-				62B6EE991C57405D00EFA0E8 /* XXBViewController.h */,
-				62B6EE9A1C57405D00EFA0E8 /* XXBViewController.m */,
+				62B6EE991C57405D00EFA0E8 /* XXBMianViewController.h */,
+				62B6EE9A1C57405D00EFA0E8 /* XXBMianViewController.m */,
 				62B6EE9C1C5743FA00EFA0E8 /* XXBLastViewController.h */,
 				62B6EE9D1C5743FA00EFA0E8 /* XXBLastViewController.m */,
 			);
@@ -146,12 +149,14 @@
 			children = (
 				626477141BCCA319006BFD1C /* XXBNavigationController.h */,
 				626477151BCCA319006BFD1C /* XXBNavigationController.m */,
-				7824D28A20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.h */,
-				7824D28B20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.m */,
+				7824D28A20BC537F00DD1C56 /* XXBTransitioningAnimation.h */,
+				7824D28B20BC537F00DD1C56 /* XXBTransitioningAnimation.m */,
 				7824D28D20BD067700DD1C56 /* XXBPushAnimation.h */,
 				7824D28E20BD067700DD1C56 /* XXBPushAnimation.m */,
 				7824D29020BD069200DD1C56 /* XXBPopAnimation.h */,
 				7824D29120BD069200DD1C56 /* XXBPopAnimation.m */,
+				7891CE132474DA790069464A /* XXBViewController.h */,
+				7891CE142474DA790069464A /* XXBViewController.m */,
 			);
 			name = XXBNav;
 			path = ../../XXBNav;
@@ -264,11 +269,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				626477231BCCA3D4006BFD1C /* XXBTableViewController.m in Sources */,
-				62B6EE9B1C57405D00EFA0E8 /* XXBViewController.m in Sources */,
+				7891CE152474DA790069464A /* XXBViewController.m in Sources */,
+				62B6EE9B1C57405D00EFA0E8 /* XXBMianViewController.m in Sources */,
 				626477161BCCA319006BFD1C /* XXBNavigationController.m in Sources */,
 				626477251BCCA3D4006BFD1C /* main.m in Sources */,
 				626477241BCCA3D4006BFD1C /* AppDelegate.m in Sources */,
-				7824D28C20BC537F00DD1C56 /* XXBBaseTransitioningAnimation.m in Sources */,
+				7824D28C20BC537F00DD1C56 /* XXBTransitioningAnimation.m in Sources */,
 				62B6EE9E1C5743FA00EFA0E8 /* XXBLastViewController.m in Sources */,
 				7824D29220BD069200DD1C56 /* XXBPopAnimation.m in Sources */,
 				7824D28F20BD067700DD1C56 /* XXBPushAnimation.m in Sources */,

@@ -6,8 +6,8 @@
 //  Copyright © 2018年 xiaobing. All rights reserved.
 //
 
-#import "XXBBaseTransitioningAnimation.h"
+#import "XXBTransitioningAnimation.h"
 
-@interface XXBPushAnimation : XXBBaseTransitioningAnimation
+@interface XXBPushAnimation : XXBTransitioningAnimation
 
 @end

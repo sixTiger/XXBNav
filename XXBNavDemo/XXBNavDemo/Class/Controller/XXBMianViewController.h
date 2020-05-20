@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XXBViewController : UIViewController
+@interface XXBMianViewController : UIViewController
 
 @end

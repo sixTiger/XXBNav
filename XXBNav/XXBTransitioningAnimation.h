@@ -1,5 +1,5 @@
 //
-//  XXBBaseTransitioningAnimation.h
+//  XXBTransitioningAnimation.h
 //  XXBNavDemo
 //
 //  Created by xiaobing5 on 2018/5/28.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface XXBBaseTransitioningAnimation : NSObject <UIViewControllerAnimatedTransitioning>
+@interface XXBTransitioningAnimation : NSObject <UIViewControllerAnimatedTransitioning>
 
 
 /**

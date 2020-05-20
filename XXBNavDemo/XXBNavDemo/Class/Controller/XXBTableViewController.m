@@ -9,7 +9,7 @@
 #import "XXBTableViewController.h"
 #import <XXBLibs.h>
 #import <XXBLibs/XXBLibsCategory.h>
-#import "XXBViewController.h"
+#import "XXBMianViewController.h"
 
 @interface XXBTableViewController ()
 
@@ -47,6 +47,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self.navigationController pushViewController:[XXBViewController new] animated:YES];
+    [self.navigationController pushViewController:[XXBMianViewController new] animated:YES];
 }
 @end

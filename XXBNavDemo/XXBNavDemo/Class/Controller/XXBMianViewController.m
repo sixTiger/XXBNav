@@ -6,12 +6,12 @@
 //  Copyright © 2016年 xiaobing. All rights reserved.
 //
 
-#import "XXBViewController.h"
+#import "XXBMianViewController.h"
 #import <XXBLibs.h>
 #import <XXBLibs/XXBLibsCategory.h>
 #import "XXBLastViewController.h"
 
-@implementation XXBViewController
+@implementation XXBMianViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

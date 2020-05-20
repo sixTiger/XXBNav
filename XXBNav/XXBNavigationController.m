@@ -7,14 +7,13 @@
 //
 
 #import "XXBNavigationController.h"
-#import "XXBBaseTransitioningAnimation.h"
+#import "XXBTransitioningAnimation.h"
 #import "XXBPushAnimation.h"
 #import "XXBPopAnimation.h"
 
 @interface XXBNavigationController ()<UIGestureRecognizerDelegate, UINavigationControllerDelegate>
-@property (nonatomic, strong) id                                popDelegate;
 @property(nonatomic , strong) UIPanGestureRecognizer            *panGestureRecognizer;
-@property(nonatomic, strong) XXBBaseTransitioningAnimation      *transitioningAnimation;
+@property(nonatomic, strong) XXBTransitioningAnimation          *transitioningAnimation;
 @property(nonatomic, strong) XXBPushAnimation                   *pushAnimation;
 @property(nonatomic, strong) XXBPopAnimation                    *popAnimation;
 
@@ -38,11 +37,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _popDelegate = self.interactivePopGestureRecognizer.delegate;
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:_popDelegate action:@selector(handleNavigationTransition:)];
-#pragma clang diagnostic pop
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleNavigationTransition:)];
+    self.panGestureRecognizer = pan;
     pan.delegate = self;
     [self.view addGestureRecognizer:pan];
     self.interactivePopGestureRecognizer.enabled = NO;
@@ -63,28 +59,34 @@
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    
+    BOOL shouldBegin = NO;
     if ([[self valueForKey:@"_isTransitioning"] boolValue]) {
         /**
          *  如果正在执行专场动画就不响应手势
          */
-        return NO;
-    }
-    
-    if (gestureRecognizer == self.panGestureRecognizer) {
-        if (self.childViewControllers.count == 1) {
-            return NO;
-        } else {
+        shouldBegin =  NO;
+    } else {
+        if (gestureRecognizer == self.panGestureRecognizer) {
+            if (self.childViewControllers.count == 1) {
+                shouldBegin =  NO;
+            } else {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused"
-            // FIXME:todo change pan userfull point 可以调整手势的作用范围
-            CGPoint point = [gestureRecognizer locationInView:self.view];
+                // FIXME:todo change pan userfull point 可以调整手势的作用范围
+                CGPoint point = [gestureRecognizer locationInView:self.view];
 #pragma clang diagnostic pop
-            return YES;
+                shouldBegin =  YES;;
+            }
+        } else {
+            shouldBegin = YES;
         }
-        
-    } else {
-        return YES;
+    }
+    return shouldBegin;
+}
+
+- (void)handleNavigationTransition:(UIPanGestureRecognizer *)PanGesture {
+    if ([self.interactivePopGestureRecognizer.delegate respondsToSelector:@selector(handleNavigationTransition:)]) {
+        [self.interactivePopGestureRecognizer.delegate performSelector:@selector(handleNavigationTransition:) withObject:PanGesture];
     }
 }
 
@@ -98,7 +100,6 @@
         case UINavigationControllerOperationPop:
             return self.popAnimation;
             break;
-            
         default:
             break;
     }
@@ -115,9 +116,9 @@
 #pragma mark - UINavigationControllerDelegate END
 
 #pragma mark - layz Load
-- (XXBBaseTransitioningAnimation *)transitioningAnimation {
+- (XXBTransitioningAnimation *)transitioningAnimation {
     if (_transitioningAnimation == nil) {
-        _transitioningAnimation = [[XXBBaseTransitioningAnimation alloc] init];
+        _transitioningAnimation = [[XXBTransitioningAnimation alloc] init];
     }
     return _transitioningAnimation;
 }
