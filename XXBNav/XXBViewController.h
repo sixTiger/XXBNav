@@ -6,8 +6,9 @@
 //  Copyright © 2020 xiaobing. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "XXBViewControllerProtocol.h"
 
-@interface XXBViewController : NSObject
+@interface XXBViewController : UIViewController<XXBViewControllerProtocol>
 
 @end

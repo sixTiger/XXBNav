@@ -20,6 +20,8 @@
 		7824D28C20BC537F00DD1C56 /* XXBTransitioningAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7824D28B20BC537F00DD1C56 /* XXBTransitioningAnimation.m */; };
 		7824D28F20BD067700DD1C56 /* XXBPushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7824D28E20BD067700DD1C56 /* XXBPushAnimation.m */; };
 		7824D29220BD069200DD1C56 /* XXBPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7824D29120BD069200DD1C56 /* XXBPopAnimation.m */; };
+		787A0368247BA17800A85720 /* XXBRightDragPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787A0367247BA17800A85720 /* XXBRightDragPushViewController.m */; };
+		787A036B247BB45200A85720 /* XXBRightDragPushTOVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 787A036A247BB45200A85720 /* XXBRightDragPushTOVC.m */; };
 		7891CE152474DA790069464A /* XXBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7891CE142474DA790069464A /* XXBViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,11 @@
 		7824D28E20BD067700DD1C56 /* XXBPushAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBPushAnimation.m; sourceTree = "<group>"; };
 		7824D29020BD069200DD1C56 /* XXBPopAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBPopAnimation.h; sourceTree = "<group>"; };
 		7824D29120BD069200DD1C56 /* XXBPopAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBPopAnimation.m; sourceTree = "<group>"; };
+		787A0365247B82BF00A85720 /* XXBViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBViewControllerProtocol.h; sourceTree = "<group>"; };
+		787A0366247BA17800A85720 /* XXBRightDragPushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBRightDragPushViewController.h; sourceTree = "<group>"; };
+		787A0367247BA17800A85720 /* XXBRightDragPushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBRightDragPushViewController.m; sourceTree = "<group>"; };
+		787A0369247BB45200A85720 /* XXBRightDragPushTOVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBRightDragPushTOVC.h; sourceTree = "<group>"; };
+		787A036A247BB45200A85720 /* XXBRightDragPushTOVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBRightDragPushTOVC.m; sourceTree = "<group>"; };
 		7891CE132474DA790069464A /* XXBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXBViewController.h; sourceTree = "<group>"; };
 		7891CE142474DA790069464A /* XXBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXBViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +98,10 @@
 				62B6EE9A1C57405D00EFA0E8 /* XXBMianViewController.m */,
 				62B6EE9C1C5743FA00EFA0E8 /* XXBLastViewController.h */,
 				62B6EE9D1C5743FA00EFA0E8 /* XXBLastViewController.m */,
+				787A0366247BA17800A85720 /* XXBRightDragPushViewController.h */,
+				787A0367247BA17800A85720 /* XXBRightDragPushViewController.m */,
+				787A0369247BB45200A85720 /* XXBRightDragPushTOVC.h */,
+				787A036A247BB45200A85720 /* XXBRightDragPushTOVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,6 +168,7 @@
 				7824D29120BD069200DD1C56 /* XXBPopAnimation.m */,
 				7891CE132474DA790069464A /* XXBViewController.h */,
 				7891CE142474DA790069464A /* XXBViewController.m */,
+				787A0365247B82BF00A85720 /* XXBViewControllerProtocol.h */,
 			);
 			name = XXBNav;
 			path = ../../XXBNav;
@@ -275,6 +287,8 @@
 				626477251BCCA3D4006BFD1C /* main.m in Sources */,
 				626477241BCCA3D4006BFD1C /* AppDelegate.m in Sources */,
 				7824D28C20BC537F00DD1C56 /* XXBTransitioningAnimation.m in Sources */,
+				787A036B247BB45200A85720 /* XXBRightDragPushTOVC.m in Sources */,
+				787A0368247BA17800A85720 /* XXBRightDragPushViewController.m in Sources */,
 				62B6EE9E1C5743FA00EFA0E8 /* XXBLastViewController.m in Sources */,
 				7824D29220BD069200DD1C56 /* XXBPopAnimation.m in Sources */,
 				7824D28F20BD067700DD1C56 /* XXBPushAnimation.m in Sources */,

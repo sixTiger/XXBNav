@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FXB-z0-qdA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IuF-aX-xwY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -7,10 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="xFV-9r-0Cr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FXB-z0-qdA" customClass="XXBNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="M18-qK-Zcx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iQC-tK-QLv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -23,7 +24,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YO6-GO-EDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-206" y="-375"/>
+            <point key="canvasLocation" x="702.89855072463774" y="-375"/>
+        </scene>
+        <!--Right Drag Push View Controller-->
+        <scene sceneID="OjZ-pf-7ah">
+            <objects>
+                <viewController id="AKa-7d-c8C" customClass="XXBRightDragPushViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Y2-aV-JBc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sbk-th-6cg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZhZ-4U-hHd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OwO-aU-sfm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ve3-yp-1gg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613.0434782608697" y="324.77678571428572"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Un1-Ju-lBy">
@@ -52,7 +72,44 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ue-vB-Xyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="467" y="-375"/>
+            <point key="canvasLocation" x="1376.8115942028987" y="-375"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JYr-Iv-JaJ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IuF-aX-xwY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fjF-p6-P9k">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FXB-z0-qdA" kind="relationship" relationship="viewControllers" id="beH-4s-L94"/>
+                        <segue destination="mGg-dB-MkO" kind="relationship" relationship="viewControllers" id="XpA-zu-zMn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Axf-BM-VUR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-336" y="-41"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="QsB-1g-Oo1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mGg-dB-MkO" customClass="XXBNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xam-YX-Z6F"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uiB-JQ-t5f">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AKa-7d-c8C" kind="relationship" relationship="rootViewController" id="orw-oT-Eos"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Liw-K1-DH2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702.89855072463774" y="324.77678571428572"/>
         </scene>
     </scenes>
 </document>

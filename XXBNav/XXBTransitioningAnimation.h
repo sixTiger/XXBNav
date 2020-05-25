@@ -15,27 +15,27 @@
 /**
  transitionContext
  */
-@property (nonatomic, strong) id <UIViewControllerContextTransitioning>   transitionContext;
+@property (nonatomic, strong) id <UIViewControllerContextTransitioning>     transitionContext;
 
 /**
  动画执行时间(默认值为0.25s)
  */
-@property (nonatomic) NSTimeInterval                                    transitionDuration;
+@property (nonatomic) NSTimeInterval                                        transitionDuration;
 
 /**
  源头控制器 == 在animateTransitionEvent使用才有效 ==
  */
-@property (nonatomic, strong) UIViewController                          *fromViewController;
+@property (nonatomic, strong) UIViewController                              *fromViewController;
 
 /**
  目标控制器 == 在animateTransitionEvent使用才有效 ==
  */
-@property (nonatomic, strong) UIViewController                          *toViewController;
+@property (nonatomic, strong) UIViewController                              *toViewController;
 
 /**
  containerView == 在animateTransitionEvent使用才有效 ==
  */
-@property (nonatomic, weak) UIView                                      *containerView;
+@property (nonatomic, weak) UIView                                          *containerView;
 
 /**
  动画事件 == 子类重写此方法实现动画效果 ==
